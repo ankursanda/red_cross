@@ -1,19 +1,21 @@
 import TerminalNav from "./components/TerminalNav";
 import Biometric from "./components/Biometric"
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Terminal(){
-    
-    const [biometricId,setBiometricId] = useState('');
+function Terminal({handleClick, valid, setId}){
+    const navigate = useNavigate()
 
-    const handleClick = (e) =>{
-        console.log("clicked")
-        console.log(biometricId);
-    }
+    useEffect(()=>{
+        if(valid)(
+            navigate('/Dashbord')
+        )
+    },[valid])
     //needs to change and move up the tree.
 
     const handleChange = (e) => {
         e.preventDefault();
-        setBiometricId(e.target.value);
+        setId(e.target.value);
     }
     let role = "doctor"
     

@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import styles from "../styles/Login_nav.module.css"
-import { useState,useRef, useEffect } from "react"
+import { useState, useEffect } from "react"
+import axios from 'axios'
+
 
 function Login_nav(){
     //const loginCardRef = useRef()
@@ -9,6 +12,8 @@ function Login_nav(){
         visibility: 'hidden'
     })
     const [toggle, setToggle] = useState(0)
+    const navigate = useNavigate();
+
     useEffect(()=>{
         if(toggle === 0){
             setCard({visibility:'hidden'})
@@ -42,6 +47,18 @@ function Login_nav(){
     //   }
     }
 
+    const handleClickLogin = (e) =>{
+      e.preventDefault();
+      axios.get('http://localhost:3000/login')
+      .then((response)=>{
+        if(response.data){
+            navigate('/terminal');
+        }
+      }).catch((error)=>{
+        console.error("error is",error);
+      })
+    }
+
     const role = ["Registration","First Aid","Doctor"]
 
     const roleLogin = role.map((item)=>{
@@ -53,7 +70,7 @@ function Login_nav(){
                     <input className={styles.input} type="text" id="username" name="Username" value={username} onChange={changeHandlerUsername}/>
                     <label htmlFor="pass" className={styles.label}>password:</label>
                     <input className={styles.input} type="password" id="pass" name="Pass" value={pass} onChange={changeHandlerPass}/>
-                    <button className="button">Login</button>
+                    <button className="button" onClick={handleClickLogin}>Login</button>
                 </form>
             </div>
         )
