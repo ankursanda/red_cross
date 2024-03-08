@@ -1,0 +1,36 @@
+.nav_bar{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: aqua;
+    align-items: center;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: large;
+
+}
+
+.login_button{
+    height: 40px;
+    width: 80px;
+}
+
+.form{
+    display: flex;
+    border: 1px solid red;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.login_card{
+    border: 1px solid red;
+    padding: 5px;
+    width: 500px;
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+    right: 10px;
+}

@@ -1,0 +1,12 @@
+.outer_card{
+    background-color: black;
+    height: 800px;
+    border: 1px solid red;
+}
+
+.inner_card{
+    height: 800px;
+    border: 1px solid red;
+    width:60%;
+    background-size: cover;
+}

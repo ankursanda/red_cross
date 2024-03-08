@@ -1,0 +1,35 @@
+.outer_card{
+    height: 800px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.container_pan{
+    width: 70%;
+    border: 1px solid red;
+    display: flex;
+    height: 500px;
+    background-color: rgb(107, 49, 109);
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px;
+}
+.container{
+    height: 100%;
+    width: 25%;
+    border: 1px solid red;
+    background-color: aquamarine;
+    border-radius: 3em;
+    box-sizing: border-box;
+}
+
+.head{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
