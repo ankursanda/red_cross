@@ -1,36 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    color: azure;
+    font-family: "Libre Franklin", sans-serif;
+    
+}
+.contain{
+    margin: 0px;
+    padding: 0px;
+}
+
 .nav_bar{
-    border: 1px solid red;
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    width: 100%;
+    padding: 20px;
     box-sizing: border-box;
-    background-color: aqua;
+    background-color: #09090B;
     align-items: center;
+    font-weight: 600;
 }
 
 .logo{
-    font-weight: bold;
-    font-size: large;
+    font-weight: 700;
+    font-size: 25px;
 
 }
 
 .login_button{
-    height: 40px;
-    width: 80px;
+    height: 50px;
+    width: 100px;
+    border: 0.5px solid white;
+    border-radius: 1em;
+    background-color: #09090B;
+    color: azure;
+}
+.login_button:hover{
+    cursor: pointer;
+    background-color: #2F3437;
 }
 
+.formcontain{
+    display: flex;
+    flex-flow: column;
+    height: 30%;
+}
+.role_head{
+    font-weight: 800;
+    font-size: 25px;
+}
 .form{
     display: flex;
-    border: 1px solid red;
     flex-flow: column;
     justify-content: center;
+    margin-top: 10px;
+    
+}
+.input{
+    height: 30px;
+    margin: 3px;
+}
+.button{
+    height: 30px;
+    margin: 3px;
+
 }
 
 .login_card{
-    border: 1px solid red;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
     padding: 5px;
     width: 500px;
+    height: 80%;
     position: fixed;
     background-color: rgba(0,0,0,0.4);
-    right: 10px;
+    right: 0px;
+    top: 70px;
 }

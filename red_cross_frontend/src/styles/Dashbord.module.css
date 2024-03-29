@@ -1,0 +1,62 @@
+.nav_bar{
+    background-color: #09090B;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.super_contain{
+    display: flex;
+    flex-flow: column;
+}
+
+.btn{
+    display: flex;
+    margin-top: 60px;
+}
+.click{
+    width: 50%;
+    height: 50px;
+    border-radius: 1em;
+    background-color: #26262aaa;
+    color: azure;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: none;
+}
+.click:hover{
+    cursor: pointer;
+    background-color: azure;
+    color: #09090B;
+    font-size: 25px;
+}
+
+.med_head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #212528;
+    padding: 5px;
+}
+
+.content_row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #212528;
+    padding: 5px;
+}
+
+.content{
+    width: 33.33%;
+    font-size: 20px;
+}
+.head_content{
+    width: 33.33%;
+    font-weight: 600;
+    font-size: 25px;
+}
+.containReport{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

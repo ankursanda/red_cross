@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    color: azure;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 600;
+}
+
+.contain{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    font-size: 20px;
+}
+

@@ -49,28 +49,30 @@ function Login_nav(){
 
     const handleClickLogin = (e) =>{
       e.preventDefault();
-      axios.get('http://localhost:3000/login')
+      axios.get(`http://localhost:3000/login/${username}/${pass}`)
       .then((response)=>{
         if(response.data){
             navigate('/terminal');
+        }else{
+            alert("Worng credentials")
         }
       }).catch((error)=>{
         console.error("error is",error);
       })
     }
 
-    const role = ["Registration","First Aid","Doctor"]
+    const role = ["Doctor","First Aid","Registration"]
 
-    const roleLogin = role.map((item)=>{
+    const roleLogin = role.map((item,id)=>{
         return(
-            <div>
+            <div key={id} className={styles.formcontain}>
                 <section className={styles.role_head}>{item}:</section>
                 <form action="submit" className={styles.form}>
-                    <label htmlFor="username" className={styles.label}>username:</label>
-                    <input className={styles.input} type="text" id="username" name="Username" value={username} onChange={changeHandlerUsername}/>
-                    <label htmlFor="pass" className={styles.label}>password:</label>
-                    <input className={styles.input} type="password" id="pass" name="Pass" value={pass} onChange={changeHandlerPass}/>
-                    <button className="button" onClick={handleClickLogin}>Login</button>
+                    <label htmlFor="username" className={styles.label}></label>
+                    <input className={styles.input} type="text" id="username" placeholder="username" name="Username" value={username} onChange={changeHandlerUsername}/>
+                    <label htmlFor="pass" className={styles.label}></label>
+                    <input className={styles.input} type="password" id="pass" placeholder="password" name="Pass" value={pass} onChange={changeHandlerPass}/>
+                    <button className={styles.button} onClick={handleClickLogin}>Login</button>
                 </form>
             </div>
         )
@@ -78,13 +80,13 @@ function Login_nav(){
 
     
     return(
-        <>
+        <div className={styles.contain}>
            <div className={styles.nav_bar}>
-                <div className={styles.logo}>red Cross</div>
+                <div className={styles.logo}>Red Cross</div>
                 <div className={styles.login}><button className={styles.login_button} onClick={clickHandlerNavLogin}>Login</button></div>
            </div>
            <div className={styles.login_card} style={card} >{roleLogin}</div>
-        </>
+        </div>
     )
 }
 

@@ -1,0 +1,44 @@
+.head{
+    /* Removed overflow: hidden to allow scrolling */
+    /* Adjusted z-index to a positive value */
+    position:fixed;
+    z-index: 1;
+    top: 70px;
+    right: 700px;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+.text{
+    height: 600px;
+    width: 70%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+}
+
+.text_head{
+    font-weight: 900;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    letter-spacing: 2px;
+}
+.text_body{
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.land{
+    /* Added to ensure the container allows for inner content to scroll */
+    
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
